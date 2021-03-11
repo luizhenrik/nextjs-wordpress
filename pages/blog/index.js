@@ -2,11 +2,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 // data
-import { getAllPosts } from '../../lib/api';
+import { getAllPosts } from '@/lib/api';
 
 // styles
-import styles from '../../styles/Home.module.css';
-import blogStyles from '../../styles/Blog.module.css';
+import styles from '@/styles/Home.module.css';
+import blogStyles from '@/styles/Blog.module.css';
 
 export default function Blog({allPosts: {edges}}) {
     return(
