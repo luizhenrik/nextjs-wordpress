@@ -1,0 +1,38 @@
+$fz-default: 16px;
+
+$container: 1400px;
+
+$colors: (
+    #{'light'}: (
+        #{'background-color'}: rgb(244, 242, 247),
+        #{'foreground-color'}: rgb(255,255,255),
+        #{'foreground-color2'}: rgb(249,249,249),
+        #{'primary-color'}: rgb(39,36,44),
+        #{'secondary-color'}: rgb(138,138,142),
+        #{'blue'}: rgb(0, 122, 255),
+        #{'red'}: rgb(255, 49, 58),
+        #{'green'}: rgb(59, 199, 99),
+        #{'indigo'}: rgb(88, 86, 214),
+        #{'orange'}: rgb(255, 149, 0),
+        #{'pink'}: rgb(255, 45, 85),
+        #{'purple'}: rgb(175, 82, 222),
+        #{'teal'}: rgb(90, 200, 250),
+        #{'yellow'}: rgb(255, 204, 0),
+    ),
+    #{'dark'}: (
+        #{'background-color'}: rgb(24,23,25),
+        #{'foreground-color'}: rgb(39,36,44),
+        #{'foreground-color2'}: rgb(61,58,65),
+        #{'primary-color'}: rgba(255,255,255),
+        #{'secondary-color'}: rgba(243,243,249),
+        #{'blue'}: rgb(10, 132, 255),
+        #{'red'}: rgb(255, 69, 58),
+        #{'green'}: rgb(48, 209, 88),
+        #{'indigo'}: rgb(94, 92, 230),
+        #{'orange'}: rgb(255, 159, 10),
+        #{'pink'}: rgb(255, 55, 95),
+        #{'purple'}: rgb(191, 90, 242),
+        #{'teal'}: rgb(100, 210, 255),
+        #{'yellow'}: rgb(255, 214, 10),
+    )
+)

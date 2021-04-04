@@ -1,0 +1,48 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.home-banner {
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    position: relative;
+    height: calc(100vw * 8 / 16);
+    padding: 15px;
+
+    &__image {
+        z-index: 1;
+    }
+
+    &__subtitle {
+        @include fontSize(28px);
+        @include setTheme(color, secondary-color);
+        width: 100%;
+        float: left;
+        z-index: 2;
+        line-height: 1.2;
+    }
+
+    &__title {
+        @include fontSize(80px);
+        @include setTheme(color, primary-color);
+        width: 100%;
+        float: left;
+        z-index: 2;
+        line-height: 1.2;
+        margin-top: 10px;
+    }
+
+    &__button {
+        @include fontSize(18px);
+        z-index: 2;
+        color: #FFF;
+        background-color: #000;
+        padding: 15px 25px;
+        margin-top: 10px;
+
+    }
+}

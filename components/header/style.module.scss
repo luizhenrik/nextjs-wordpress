@@ -1,0 +1,48 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.header {
+    width: 100%;
+    float: left;
+    @include setTheme(background-color, #{'foreground-color2'});
+
+    &__content {
+        width: 100%;
+        max-width: $container;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 auto;
+        padding: 30px 10px;
+    }
+
+    &__logo {
+        float: left;
+        @include widthSize(285px);
+    }
+
+    &__menu {
+        width: auto;
+        flex: 1 1 10em;
+        float: left;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 25px;
+
+    }
+
+    &__menu-item {
+        @include fontSize(15px);
+        @include setTheme(color, primary-color);
+        padding: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        line-height: 1.8;
+
+        &:hover {
+            @include setTheme(color, #{'blue'});
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+        }
+    }
+}

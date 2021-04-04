@@ -1,0 +1,5 @@
+@import './variables';
+
+@function toRem($size) {
+    @return $size / $fz-default * 1rem;
+}
