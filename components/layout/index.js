@@ -11,7 +11,7 @@ export default function Layout({ title, children }) {
         <Head>
             <title>{title}</title>
             <link rel="icon" href="/favicon.ico" />
-            <meta name="color-scheme" content="dark light" />
+            {/* <meta name="color-scheme" content="dark light" /> */}
         </Head>
 
         <Header></Header>

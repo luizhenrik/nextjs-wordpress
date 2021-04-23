@@ -6,6 +6,10 @@
     float: left;
     padding: 80px 0;
 
+    @media all and (max-width: 940px) {
+        padding: 40px 0;
+    }
+
     &__content {
         width: 100%;
         max-width: $container;
@@ -28,6 +32,10 @@
         flex: 1 1 10em;
         float: left;
         padding: 0 15px;
+
+        @media all and (max-width: 940px) {
+            margin-top: 40px;
+        }
     }
 
     &__title {

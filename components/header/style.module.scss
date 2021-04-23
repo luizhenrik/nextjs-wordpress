@@ -6,6 +6,20 @@
     float: left;
     @include setTheme(background-color, #{'foreground-color2'});
 
+    &[data-open="true"] {
+        @media all and (max-width: 940px) {
+            .header__menu {
+                opacity: 1;
+                right: 0;
+                pointer-events: all;
+            }
+            .header__overlay {
+                pointer-events: all;
+                opacity: 1;
+            }
+        }
+    }
+
     &__content {
         width: 100%;
         max-width: $container;
@@ -14,11 +28,19 @@
         align-items: center;
         margin: 0 auto;
         padding: 30px 10px;
+
+        @media all and (max-width: 940px) {
+            padding: 10px;
+        }
     }
 
     &__logo {
         float: left;
         @include widthSize(285px);
+
+        @media all and (max-width: 940px) {
+            @include widthSize(180px, 'true');
+        }
     }
 
     &__menu {
@@ -29,6 +51,37 @@
         justify-content: flex-end;
         padding: 0 25px;
 
+        @media all and (max-width: 940px) {
+            width: 85%;
+            flex: 0 1 85%;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            right: -10%;
+            height: 100%;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            align-content: flex-start;
+            z-index: 12;
+            pointer-events: none;
+            opacity: 0;
+            @include setTheme(background-color, #{'foreground-color2'});
+        }
+
+    }
+
+    &__overlay {
+        @media all and (max-width: 940px) {
+            width: 100%;
+            float: left;
+            background-color: rgba(#000, 0.3);
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            opacity: 0;
+            z-index: 11;
+        }
     }
 
     &__menu-item {
@@ -43,6 +96,22 @@
             @include setTheme(color, #{'blue'});
             text-decoration: underline;
             text-decoration-thickness: 2px;
+        }
+
+        &.is-active {
+            @include setTheme(color, #{'blue'});
+            text-decoration-thickness: 2px;
+        }
+
+        @media all and (max-width: 940px) {
+            width: 100%;
+            flex: 0 1 100%;
+            text-align: center;
+            @include fontSize(18px);
+
+            &:not(:nth-of-type(1)) {
+                border-top: 1px solid rgba(#000, 0.2);
+            }
         }
     }
 }

@@ -3,20 +3,32 @@
 @mixin setTheme($param, $value) {
     #{$param}: map-get(map-get($colors, #{'light'}), $value);
 
-    @each $theme, $colors in $colors {
-        @media (prefers-color-scheme: #{$theme}) {
-            #{$param}: map-get($colors, $value);
-        }
+    // @each $theme, $colors in $colors {
+    //     @media (prefers-color-scheme: #{$theme}) {
+    //         #{$param}: map-get($colors, $value);
+    //     }
+    // }
+}
+
+
+@mixin fontSize($size, $important: 'false') {
+    @warn $important;
+    @if($important == 'true') {
+        font-size: $size !important;
+        font-size: toRem($size) !important;
+    }@else {
+        font-size: $size;
+        font-size: toRem($size);
     }
 }
 
-
-@mixin fontSize($size) {
-    font-size: $size;
-    font-size: toRem($size);
-}
-
-@mixin widthSize($size) {
-    width: $size;
-    width: toRem($size);
+@mixin widthSize($size, $important: 'false') {
+    @warn $important;
+    @if($important == 'true') {
+        width: $size !important;
+        width: toRem($size) !important;
+    }@else {
+        width: $size;
+        width: toRem($size);
+    }
 }
