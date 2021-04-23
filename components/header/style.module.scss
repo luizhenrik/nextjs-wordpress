@@ -54,7 +54,7 @@
         @media all and (max-width: 940px) {
             width: 85%;
             flex: 0 1 85%;
-            padding: 20px;
+            padding: 40px 20px 20px;
             position: fixed;
             top: 0;
             right: -10%;
@@ -65,9 +65,23 @@
             z-index: 12;
             pointer-events: none;
             opacity: 0;
+            transition: All 0.30s linear;
             @include setTheme(background-color, #{'foreground-color2'});
         }
 
+    }
+
+    &__handler {
+        width: 25px;
+        height: 25px;
+        margin-left: auto;
+        background-color: red;
+        z-index: 13;
+        display: none;
+
+        @media all and (max-width: 940px) {
+            display: block;
+        }
     }
 
     &__overlay {
@@ -81,6 +95,7 @@
             pointer-events: none;
             opacity: 0;
             z-index: 11;
+            height: 100%;
         }
     }
 

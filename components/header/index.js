@@ -26,6 +26,7 @@ export default function Header() {
                 height={logoWidth * 28.77 / 100}
                 className={`${style.header__logo}`}
                 />
+                <span className={`${style.header__handler}`} onClick={setToggleHeader}/>
                 <div className={`${style.header__overlay}`} onClick={setToggleHeader}></div>
                 <div className={`${style.header__menu}`}>
                     <a className={`${style['header__menu-item']}`}>Inicio</a>

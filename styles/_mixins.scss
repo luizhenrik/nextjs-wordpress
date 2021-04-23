@@ -12,7 +12,6 @@
 
 
 @mixin fontSize($size, $important: 'false') {
-    @warn $important;
     @if($important == 'true') {
         font-size: $size !important;
         font-size: toRem($size) !important;
@@ -23,7 +22,6 @@
 }
 
 @mixin widthSize($size, $important: 'false') {
-    @warn $important;
     @if($important == 'true') {
         width: $size !important;
         width: toRem($size) !important;
