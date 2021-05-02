@@ -6,7 +6,7 @@ import HomeServices from '@/components/home/services'
 
 export default function Home() {
   return (
-    <Layout title={'Contato'}>
+    <Layout title={'Home'}>
         <HomeBanner/>
         <HomeServices/>
         <HomeBio/>
