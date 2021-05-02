@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 
 import style from '@/components/home/bio.module.scss'
+import Link from 'next/link'
 
 export default function HomeBio() {
   return (
@@ -22,7 +23,9 @@ export default function HomeBio() {
                         Adipisicing ea id aliquip id non voluptate nulla voluptate pariatur occaecat nostrud veniam. Elit nisi tempor quis ad officia consectetur nostrud eiusmod elit quis eu esse occaecat. Duis ipsum deserunt cillum ex occaecat ullamco fugiat esse esse anim nulla.
                     </p>
 
-                    <a className={`${style['home-bio__button']}`}>Leia Mais</a>
+                    <Link href={'/contact'}>
+                        <a className={`${style['home-bio__button']}`}>Leia Mais</a>
+                    </Link>
                 </div>
             </div>
         </article>

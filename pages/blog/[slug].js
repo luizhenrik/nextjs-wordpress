@@ -3,6 +3,8 @@ import { getAllPostsWithSlug, getPost } from '@/lib/api'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
+import Layout from '@/components/layout'
+
 export default function Post({ postData }) {
   const router = useRouter()
 
@@ -11,6 +13,7 @@ export default function Post({ postData }) {
   }
 
   return (
+      <Layout title={postData.title}>
         <>
         {router.isFallback
           ? (
@@ -25,12 +28,13 @@ export default function Post({ postData }) {
             dangerouslySetInnerHTML={{ __html: postData.content }}/>
             </>
             )}
-        <p>
-            <Link href={'/blog'}>
-                <a>Voltar</a>
-            </Link>
-        </p>
+            <p>
+                <Link href={'/blog'}>
+                    <a>Voltar</a>
+                </Link>
+            </p>
         </>
+    </Layout>
   )
 }
 

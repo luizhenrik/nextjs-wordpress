@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 import style from './style.module.scss'
+import Link from 'next/link'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
@@ -29,9 +30,15 @@ export default function Header() {
                 <span className={`${style.header__handler}`} onClick={setToggleHeader}/>
                 <div className={`${style.header__overlay}`} onClick={setToggleHeader}></div>
                 <div className={`${style.header__menu}`}>
-                    <a className={`${style['header__menu-item']}`}>Inicio</a>
-                    <a className={`${style['header__menu-item']}`}>Contato</a>
-                    <a className={`${style['header__menu-item']}`}>Blog</a>
+                    <Link href={'/'}>
+                        <a className={`${style['header__menu-item']}`}>Inicio</a>
+                    </Link>
+                    <Link href={'/contact'}>
+                        <a className={`${style['header__menu-item']}`}>Contato</a>
+                    </Link>
+                    <Link href={'/blog'}>
+                        <a className={`${style['header__menu-item']}`}>Blog</a>
+                    </Link>
                 </div>
             </div>
         </header>
