@@ -12,8 +12,10 @@ export default function Post({ postData }) {
     return <p>IHHH mano deu ruim</p>
   }
 
+  const title = (router.isFallback) ? 'loading' : postData.title
+
   return (
-      <Layout title={postData.title}>
+      <Layout title={title}>
         <>
         {router.isFallback
           ? (
@@ -21,7 +23,7 @@ export default function Post({ postData }) {
             )
           : (
               <>
-            <h1>{postData.title}</h1>
+            <h1>{title}</h1>
 
             <div
             className={'post-content content'}
