@@ -59,11 +59,15 @@
             }
         }
     }
+    &__item-image {
+        width: 100%;
+    }
 
     &__item-title {
         @include fontSize(24px);
         @include setTheme(color, primary-color);
         text-align: center;
+        margin-top: 15px;
     }
 
     &__item-text{
