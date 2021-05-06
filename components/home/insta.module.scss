@@ -25,6 +25,7 @@
         @include fontSize(30px);
         color: #3A3A50;
         font-weight: 300;
+        margin-top: 10px;
 
         @media all and (max-width: 940px) {
             @include fontSize(14px);
