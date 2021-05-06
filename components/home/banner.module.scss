@@ -22,22 +22,29 @@
     }
 
     &__subtitle {
-        @include fontSize(28px);
-        @include setTheme(color, secondary-color);
+        @include fontSize(20px);
         width: 100%;
         float: left;
         z-index: 2;
-        line-height: 1.2;
+        text-align: left;
+        color: #262626;
+        font-weight: 300;
+        text-transform: uppercase;
+        line-height: 1.58em;
+        letter-spacing: 4px;
     }
 
     &__title {
         @include fontSize(80px);
-        @include setTheme(color, primary-color);
         width: 100%;
         float: left;
         z-index: 2;
-        line-height: 1.2;
         margin-top: 10px;
+
+        text-align: left;
+        color: #262626;
+        font-weight: 700;
+        line-height: 1em;
 
         @media all and (max-width: 940px){
             @include fontSize(34px);
@@ -45,12 +52,16 @@
     }
 
     &__button {
-        @include fontSize(18px);
         z-index: 2;
         color: #FFF;
-        background-color: #000;
+        background-color: #262626;
         padding: 15px 25px;
-        margin-top: 10px;
+        margin-top: 30px;
+        letter-spacing: 0.9px;
+
+        font-size: 0.95rem;
+        font-weight: 600;
+        line-height: 1em;
 
     }
 }
