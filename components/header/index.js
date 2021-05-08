@@ -19,6 +19,7 @@ export default function Header() {
 
     window.addEventListener('resize', sizeOnResize)
   }, [])
+
   const setToggleHeader = () => {
     setOpen(!open)
   }
@@ -32,8 +33,11 @@ export default function Header() {
                 height={logoWidth * 28.77 / 100}
                 className={`${style.header__logo}`}
                 />
-                <span className={`${style.header__handler}`} onClick={setToggleHeader}/>
+
+                <span className={`${style.header__handler}`} data-opened={open} onClick={setToggleHeader}/>
+
                 <div className={`${style.header__overlay}`} onClick={setToggleHeader}></div>
+
                 <div className={`${style.header__menu}`}>
                     <Link href={'/'}>
                         <a className={`${style['header__menu-item']}`}>Inicio</a>
