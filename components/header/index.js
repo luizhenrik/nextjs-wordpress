@@ -8,11 +8,16 @@ export default function Header() {
   const [open, setOpen] = useState(false)
   const [logoWidth, setLogoWidth] = useState(285)
   useEffect(() => {
-    if (window.screen.width < 940) {
-      setLogoWidth(189)
-    } else {
-      setLogoWidth(285)
+    const sizeOnResize = () => {
+      if (window.innerWidth < 940) {
+        setLogoWidth(189)
+      } else {
+        setLogoWidth(285)
+      }
     }
+    sizeOnResize()
+
+    window.addEventListener('resize', sizeOnResize)
   }, [])
   const setToggleHeader = () => {
     setOpen(!open)

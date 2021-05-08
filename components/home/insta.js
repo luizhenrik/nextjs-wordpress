@@ -14,7 +14,7 @@ export default function HomeInsta() {
                     {items.map((el) => {
                       return (
                           <>
-                            <a className={`${style['home-insta__item']}`}>
+                            <a className={`${style['home-insta__item']}`} data-test={el}>
                                 <img
                                 src={'/images/home-insta.png'}
                                 className={`${style['home-insta__item-image']}`}

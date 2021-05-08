@@ -14,7 +14,7 @@ export default function HomeWorks() {
                     {items.map((el) => {
                       return (
                           <>
-                            <div className={`${style['home-works__item']}`}>
+                            <div className={`${style['home-works__item']}`} data-test={el}>
                                 <img
                                 src={'/images/home-works.png'}
                                 className={`${style['home-works__item-image']}`}
