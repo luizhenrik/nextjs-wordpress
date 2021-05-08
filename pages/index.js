@@ -4,6 +4,7 @@ import HomeBio from '@/components/home/bio'
 import HomeBanner from '@/components/home/banner'
 import HomeServices from '@/components/home/services'
 import HomeInsta from '@/components/home/insta'
+import HomeWorks from '@/components/home/works'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <HomeServices/>
         <HomeInsta/>
         <HomeBio/>
+        <HomeWorks/>
     </Layout>
   )
 }

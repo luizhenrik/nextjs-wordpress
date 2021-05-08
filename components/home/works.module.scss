@@ -1,0 +1,94 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.home-works {
+    width: 100%;
+    float: left;
+    padding: 80px 0;
+    background-color: #FFF;
+
+    &__title {
+        width: 100%;
+        @include fontSize(42px);
+        color: #3A3A50;
+        font-weight: 700;
+        line-height: 1.2;
+
+        @media all and (max-width: 940px) {
+            @include fontSize(25px);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__subtitle {
+        @include fontSize(30px);
+        color: #3A3A50;
+        font-weight: 300;
+        margin-top: 10px;
+
+        @media all and (max-width: 940px) {
+            @include fontSize(14px);
+            line-height: 1.5em;
+            text-align: center;
+            margin-top: 0;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        max-width: $container;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 15px;
+    }
+
+    &__container {
+        width: 100%;
+        float: left;
+        margin-top: 45px;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: auto;
+        justify-content: center;
+
+        @media all and (max-width: 939px) {
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            overflow: auto;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        float: left;
+        max-width: calc(100% / 8);
+        padding: 5px;
+        position: relative;
+
+        &::before {
+            content: '';
+            padding-top: 38%;
+            display: block;
+        }
+
+        @media all and (max-width: 939px) {
+            max-width: calc(100% / 2.5);
+            min-width: calc(100% / 2.5);
+        }
+    }
+
+    &__item-image {
+        width: calc(100% - 5px);
+        height: calc(100% - 5px);
+        float: left;
+        position: absolute;
+        top: 0;
+        left: 2.5px;
+        object-fit: contain;
+    }
+}
