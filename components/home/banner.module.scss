@@ -17,6 +17,18 @@
         height: calc(100vw * 4 / 4);
     }
 
+    &__content {
+        width: 100%;
+        max-width: $container;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 15px;
+    }
+
     &__image {
         z-index: 1;
     }

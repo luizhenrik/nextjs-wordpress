@@ -4,7 +4,7 @@
 .header {
     width: 100%;
     float: left;
-    @include setTheme(background-color, #{'foreground-color2'});
+    background-color: #FFF;
 
     &[data-open="true"] {
         @media all and (max-width: 940px) {

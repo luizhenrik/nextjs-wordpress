@@ -3,7 +3,7 @@ import React from 'react'
 import style from '@/components/home/works.module.scss'
 
 export default function HomeWorks() {
-  const items = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']
+  const items = ['one', 'two', 'three', 'four']
   return (
         <div className={`${style['home-works']}`}>
             <div className={`${style['home-works__content']}`}>
