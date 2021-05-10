@@ -1,0 +1,77 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.contact-skills {
+    width: 100%;
+    float: left;
+    padding: 80px 0;
+    background-color: #FFF;
+
+    &__title {
+        width: 100%;
+        @include fontSize(42px);
+        color: #3A3A50;
+        font-weight: 700;
+        line-height: 1.2;
+        order: 2;
+
+        @media all and (max-width: 940px) {
+            @include fontSize(25px);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__subtitle {
+        width: 100%;
+        @include fontSize(20px);
+        color: #3A3A50;
+        font-weight: 300;
+        margin-top: 10px;
+        order: 1;
+
+        @media all and (max-width: 940px) {
+            @include fontSize(12px);
+            line-height: 1.5em;
+            text-align: center;
+            margin-top: 0;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        max-width: $container;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 15px;
+    }
+
+    &__image {
+        float: left;
+        max-width: 100%;
+        height: auto;
+        order: 4;
+
+        @media all and (max-width: 940px) {
+            order: 3;
+        }
+    }
+
+    &__container {
+        width: auto;
+        flex: 1 1 10em;
+        float: left;
+        padding: 0 15px;
+        order: 3;
+
+        @media all and (max-width: 940px) {
+            margin-top: 40px;
+            padding: 0;
+            order: 4;
+        }
+    }
+}

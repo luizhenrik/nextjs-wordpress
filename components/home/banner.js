@@ -16,7 +16,6 @@ export default function HomeBanner() {
                 />
                 <h3 className={`${style['home-banner__subtitle']}`}>Lorem Ipsum</h3>
                 <h1 className={`${style['home-banner__title']}`}>Dolor cacildes mininis</h1>
-                <a className={`${style['home-banner__button']}`}>Contato</a>
             </div>
         </article>
   )
